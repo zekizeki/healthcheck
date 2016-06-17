@@ -1,0 +1,20 @@
+{
+  "name": "healthchecker",
+  "version": "1.0.0",
+  "description": "perform healthchecks on remote servers and do alerts if down",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "healthcheck",
+    "monit"
+  ],
+  "author": "Rob Smart",
+  "license": "MIT",
+  "dependencies": {
+    "dateformat": "^1.0.12",
+    "healthcheck": "^0.1.3",
+    "request": "^2.72.0"
+  }
+}
