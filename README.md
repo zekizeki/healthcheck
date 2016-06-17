@@ -4,14 +4,15 @@ This is a simple monit style healthcheck script for HTTP/HTTPS based Services
 The Service takes a host and path checkpoint and does repeated checks against the service. If it doesnt receive a 200 OK it will post a JSON 
 message to a configurable URL. The JSON is in Slack notification format.
 
+#Configuration
 Options on the service are set via environment parameters
 
-#Mandatory
+##Mandatory Environment variables
 SERVER - This should be the host and port  e.g.   google.com:443
 
 NOTIFICATION_URL - A Slack notification or other url to post alerts to e.g. https://hooks.slack.com/services/XXXXXXXX/XXXXXXXX/XXXXXXXXXXXXXX
 
-#Optional
+##OptionalEnvironment variables
 CONTEXT_PATH -  defaults to /healthcheck'
 
 USE_HTTPS -  defaults to false
