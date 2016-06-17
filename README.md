@@ -12,7 +12,7 @@ SERVER - This should be the host and port  e.g.   google.com:443
 
 NOTIFICATION_URL - A Slack notification or other url to post alerts to e.g. https://hooks.slack.com/services/XXXXXXXX/XXXXXXXX/XXXXXXXXXXXXXX
 
-##OptionalEnvironment variables
+##Optional Environment variables
 CONTEXT_PATH -  defaults to /healthcheck'
 
 USE_HTTPS -  defaults to false
