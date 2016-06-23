@@ -42,12 +42,11 @@ var instance = new HealthCheck({
             var hc = list[s];
             
             var action_time = dateformat(hc.action_time, 'HH:MM:ss');
-            var since = dateformat(hc.since, 'HH:MM:ss');
             
             // if server is down still after 3 checks perform slack alert
             if(hc.down && (hc.concurrent == NOTIFY_AFTER || (hc.concurrent % UPDATE_EVERY ==0) ) ) {
               // healthcheck is down
-              var message = 'Healthcheck failed for '+s+ CONTEXT_PATH +' at ' + action_time +' down since ' + since + ' last status is '+hc.last_status;
+              var message = 'Healthcheck failed for '+s+ CONTEXT_PATH +' at ' + action_time + ' last status is '+hc.last_status;
               console.log(message)
               performSlackNotification(message);
             }
